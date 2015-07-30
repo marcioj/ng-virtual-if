@@ -1,0 +1,19 @@
+{
+  "name": "ng-virtual-if",
+  "version": "0.0.1",
+  "authors": [
+    "Marcio Junior <marciojunior1991@gmail.com>"
+  ],
+  "main": "src/ng-virtual-if.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.4.3",
+    "angular-mocks": "~1.4.3"
+  }
+}

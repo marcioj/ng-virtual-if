@@ -1,0 +1,19 @@
+{
+  "framework": "mocha+chai",
+  "test_page": "tests/index.mustache",
+  "before_tests": "./node_modules/.bin/jshint .",
+  "src_files": [
+    "bower_components/angular/angular.js",
+    "bower_components/angular-mocks/angular-mocks.js",
+    "src/**/*.js",
+    "tests/test-helper.js",
+    "tests/**/*-test.js"
+  ],
+  "launch_in_ci": [
+    "PhantomJS"
+  ],
+  "launch_in_dev": [
+    "PhantomJS",
+    "Chrome"
+  ]
+}

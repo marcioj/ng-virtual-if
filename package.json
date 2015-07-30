@@ -1,0 +1,14 @@
+{
+  "name": "ng-virtual-if",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/ng-virtual-if.js",
+  "scripts": {
+    "test": "mocha --reporter spec 'tests/**/*-test.js'"
+  },
+  "author": "Marcio Junior <marciojunior1991@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "jshint": "^2.8.0"
+  }
+}
