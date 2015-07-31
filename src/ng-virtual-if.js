@@ -18,8 +18,13 @@
             var bounds = getVirtualIfBounds(elem);
             var morph = new Morph(bounds.start, bounds.end);
 
-            $scope.$watch($attr.vIf, function(value) {
+            var removeWatcher = $scope.$watch($attr.vIf, function(value) {
               morph.toggle(value);
+            });
+
+            $scope.$on('$destroy', function () {
+              morph.teardown();
+              removeWatcher();
             });
           }
         };
@@ -58,6 +63,10 @@
       if (this.prev) {
         this.range.insertNode(this.prev);
       }
+    };
+
+    Morph.prototype.teardown = function () {
+      this.range.deleteContents();
     };
 
     return ngVirtualIf;
