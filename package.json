@@ -4,11 +4,12 @@
   "description": "",
   "main": "src/ng-virtual-if.js",
   "scripts": {
-    "test": "mocha --reporter spec 'tests/**/*-test.js'"
+    "test": "testem ci"
   },
   "author": "Marcio Junior <marciojunior1991@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "jshint": "^2.8.0"
+    "jshint": "^2.8.0",
+    "testem": "^0.9.4"
   }
 }
