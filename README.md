@@ -6,7 +6,17 @@ TODO
 
 ## Usage
 
-TODO
+```js
+angular.module('my-app', ['ng-virtual-if']);
+```
+
+```html
+<div>
+<!-- directive: vIf message -->
+<span>Hello {{message}}</span>
+<!-- vEnd -->
+</div>'
+```
 
 ## Running Tests
 
