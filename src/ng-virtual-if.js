@@ -4,7 +4,7 @@
   } else if (typeof module === 'object' && module.exports) {
     module.exports = factory();
   } else {
-    root.returnExports = factory();
+    factory();
   }
 }(this, function () {
 
@@ -18,13 +18,13 @@
             var bounds = getVirtualIfBounds(elem);
             var morph = new Morph(bounds.start, bounds.end);
 
-            var removeWatcher = $scope.$watch($attr.vIf, function(value) {
+            $scope.$watch($attr.vIf, function(value) {
               morph.toggle(value);
             });
 
             $scope.$on('$destroy', function () {
               morph.teardown();
-              removeWatcher();
+              morph = null;
             });
           }
         };
